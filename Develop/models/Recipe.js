@@ -23,7 +23,7 @@ Recipe.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    add_recipe: {
+    calorie_count: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
