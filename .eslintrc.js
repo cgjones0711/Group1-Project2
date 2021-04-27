@@ -289,5 +289,5 @@ module.exports = {
         "yield-star-spacing": "error",
         "yoda": "error"
     },
-   "extends" : ("prettier") 
+   "extends" : ["prettier"]
 };
