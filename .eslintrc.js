@@ -288,6 +288,6 @@ module.exports = {
         "wrap-regex": "error",
         "yield-star-spacing": "error",
         "yoda": "error"
-    }
-    
+    },
+   "extends" : ["prettier"]
 };
