@@ -24,7 +24,7 @@ Recipe.init(
       defaultValue: DataTypes.NOW,
     },
     calorie_count: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
