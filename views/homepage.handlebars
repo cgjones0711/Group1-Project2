@@ -1,5 +1,5 @@
 <!-- Loop over each object in the recipes array -->
-{{#each recipe as |recipe| }}
+{{#each recipes as |recipe| }}
 <div class="row mb-4 recipe">
   <div class="col-md-5">
     <h2>
@@ -13,7 +13,7 @@
       <span class="calorie-count">{{format_count calorie.recipe_calories}}</span>
       Calories
     </p>
-    <p>Created by {{recipe.user.name}} on {{format_date project.date_created}}</p>
+    <p>Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
