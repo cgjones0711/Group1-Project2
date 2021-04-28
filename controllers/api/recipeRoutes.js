@@ -2,6 +2,10 @@ const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// The `/api/recipes` endpoint
+
+// ------------get all recipes-------------------
+
 router.get('/', (req, res) => {
   Recipe.findAll()
   .then ((recipes)=> res.json(recipes))
@@ -10,6 +14,13 @@ router.get('/', (req, res) => {
   
 });
 
+// /-------------get one recipe----------------------
+router.get("/:id", (req, res) => {
+  Recipe.findByPk(req.params.id, {  
+  })
+    .then((recipeData) => res.json(recipeData))
+    .catch((err) => res.status(500).json(err));
+});
 
 
 router.post('/', withAuth, async (req, res) => {
