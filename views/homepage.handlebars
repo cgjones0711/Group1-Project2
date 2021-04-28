@@ -10,8 +10,7 @@
     <p>
       <i class="em em-weight_lifter" aria-role="presentation" aria-label="weights"></i>
       <!-- Pass recipe_calories value to the helper function -->
-      <span class="calorie-count">{{format_count calorie.recipe_calories}}</span>
-      Calories
+      {{recipe.calorie_count}} Calories
     </p>
     <p>Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
   </div>
