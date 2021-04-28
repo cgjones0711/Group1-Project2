@@ -1,11 +1,11 @@
 module.exports = {
     format_date: (date) => {
       // Format date as MM/DD/YYYY
-      return date.toLocaleDateString();
+      return (date).toLocaleDateString();
     },
-    format_amount: (amount) => {
+    format_count: (count) => {
       // format large numbers with commas
-      return parseInt(amount).toLocaleString();
+      return parseInt(count).toLocaleString();
     },
     get_emoji: () => {
       const randomNum = Math.random();
