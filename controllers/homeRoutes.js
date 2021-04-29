@@ -27,6 +27,26 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+router.get('/comment/:id', async (req , res) => {
+ const commentData = await Comment.findByPk(req.params.id, {
+  include: [
+    {
+    model: Recipe,
+    attributes: ['name'],
+    },
+  ],
+ });
+ res.render('comment', {
+  ...comment,
+  logged_in: req.session.logged_in
+  });
+
+});
+
+
+
+
 router.get('/recipe/:id', async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
