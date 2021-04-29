@@ -12,7 +12,7 @@ Comment.init(
         primaryKey: true,
         autoIncrement: true,
       },
-    description:{
+    comment:{
         type: DataTypes.TEXT
     },
     date_created: {
@@ -24,6 +24,13 @@ Comment.init(
         type: DataTypes.INTEGER,
         references: {
           model: 'user',
+          key: 'id',
+        },
+      },
+      recipe_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'recipe',
           key: 'id',
         },
       },
