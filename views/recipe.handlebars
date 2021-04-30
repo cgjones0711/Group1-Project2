@@ -13,7 +13,7 @@
   <h3 class="recipe-comments">{{comment.id}}</h3>
   <section class="flex-row justify-center">
    
-    {{#each comment.id as |comments|}}
+    {{#each comments as |comment|}}
     {{> comment-details}}
     {{/each}}
   </section>
@@ -50,7 +50,7 @@
     {{#each comments as |comment|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/recipe/{{comment.id}}">{{comment.name}}</a></h4>
+        <h4><a href="/recipe/{{comment.id}}">{{comment.comment}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>
