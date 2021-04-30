@@ -11,13 +11,14 @@
       
       <!-- Pass recipe_calories value to the helper function -->
       {{recipe.calorie_count}} Calories
+      <p>
+      {{recipe.description}}
+    </p>
     </p>
     <p>Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
   </div>
   <div class="col-md-7">
-    <p>
-      {{recipe.description}}
-    </p>
+    
   </div>
 </div>
 {{/each}}
